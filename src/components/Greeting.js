@@ -4,7 +4,7 @@ function Greeting() {
   const [changedText, setChangedText] = useState(false);
 
   function changeTextHandler() {
-    setChangedText(!changedText);
+    setChangedText(true);
   }
 
   return (

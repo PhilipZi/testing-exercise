@@ -13,4 +13,11 @@ describe("Greeting component", () => {
     const helloWorldElement = screen.getByText("Hello World!");
     expect(helloWorldElement).toBeInTheDocument();
   });
+  test("renders nice to see you here if the button was NOT clicked", () => {
+    render(<Greeting />);
+    const paragraphElement = screen.getByText("nice to see you", {
+      exact: false,
+    });
+    expect(paragraphElement).toBeInTheDocument();
+  });
 });

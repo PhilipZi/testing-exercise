@@ -12,7 +12,7 @@ function Greeting() {
       <h2>Hello World!</h2>
       {!changedText && <p>Its nice to see you here! </p>}
       {changedText && <p>changed! </p>}
-      <button onClick={changeTextHandler}>Change Text!</button>
+      <button onClick={changeTextHandler}>Changed Text!</button>
     </div>
   );
 }

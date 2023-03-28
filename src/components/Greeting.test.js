@@ -35,4 +35,18 @@ describe("Greeting component", () => {
     });
     expect(paragraphElement).toBeInTheDocument();
   });
+  test("does not render nice to see you if the button was clicked", () => {
+    //Arrange
+    render(<Greeting />);
+
+    //Act
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
+
+    //Assert
+    const paragraphElement = screen.queryByText("nice to see you here", {
+      exact: false,
+    });
+    expect(paragraphElement).toBeNull();
+  });
 });
